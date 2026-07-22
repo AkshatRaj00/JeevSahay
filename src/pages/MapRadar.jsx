@@ -1,4 +1,3 @@
-// src/pages/MapRadar.jsx
 import { useMemo, useState, useEffect, useCallback } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
@@ -545,7 +544,7 @@ export function MapRadar() {
                 zoom={userLocation ? 12 : 5}
                 minZoom={4}
                 maxZoom={18}
-                style={{ height: '72vh', width: '100%' }}
+                style={{ height: '70vh', width: '100%' }}
               >
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'

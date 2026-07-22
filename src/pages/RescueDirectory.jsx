@@ -113,7 +113,7 @@ export function RescueDirectory() {
           className="container"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '0.85rem',
           }}
         >
@@ -255,7 +255,7 @@ const eyebrow = {
 const heroTitle = {
   margin: 0,
   color: '#fffaf1',
-  fontSize: 'clamp(1.9rem, 4vw, 3rem)',
+  fontSize: 'clamp(1.8rem, 4vw, 3rem)',
   fontWeight: 900,
   lineHeight: 1.08,
 };
@@ -369,7 +369,7 @@ const addressText = {
 
 const dateGrid = {
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
   gap: '0.75rem',
 };
 

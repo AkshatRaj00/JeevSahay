@@ -1,4 +1,3 @@
-// src/pages/UserProfile.jsx
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -655,7 +654,7 @@ const cardList = {
 
 const rescueCard = {
   display: 'grid',
-  gridTemplateColumns: '96px 1fr',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
   gap: '1rem',
   padding: '1rem',
   borderRadius: '18px',
@@ -770,7 +769,7 @@ const iconDangerBtn = {
 
 const rescueInfoGrid = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
   gap: '0.7rem',
   marginTop: '0.85rem',
 };

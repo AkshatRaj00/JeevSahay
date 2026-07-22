@@ -82,8 +82,8 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const supportEmail = 'akshatgyan2004@gmail.com';
-  const supportPhone = '9142341588';
+  const supportEmail = 'avishekray2006@gmail.com';
+  const supportPhone = '9522752780';
   const whatsappLink = `https://wa.me/91${supportPhone}`;
   const mailtoLink = `mailto:${supportEmail}`;
 
@@ -292,7 +292,7 @@ export function Contact() {
           className="container"
           style={{
             display: 'grid',
-            gridTemplateColumns: '1.2fr 0.8fr',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '1.25rem',
           }}
         >
@@ -736,7 +736,7 @@ const errorAlert = {
 
 const fieldGrid = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gap: '1rem',
 };
 
