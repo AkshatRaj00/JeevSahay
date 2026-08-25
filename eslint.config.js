@@ -17,17 +17,8 @@ import { defineConfig, globalIgnores } from 'eslint/config';
  * Core ESLint configuration for JavaScript/JSX files with React support.
  *
  * @type {FlatConfig.Config[]}
- * @description
- * This configuration:
- * - Ignores the `dist` directory globally via `globalIgnores`.
- * - Applies to all `.js` and `.jsx` files.
- * - Extends:
- *   - ESLint's recommended rules (`js.configs.recommended`),
- *   - React Hooks rules (`reactHooks.configs.flat.recommended`),
- *   - React Refresh for Vite (`reactRefresh.configs.vite`).
- * - Configures browser globals and enables JSX parser support.
  */
-export default defineConfig([
+const config = [
   globalIgnores(['dist']),
   {
     files: ['**/*.{js,jsx}'],
@@ -46,4 +37,6 @@ export default defineConfig([
       },
     },
   },
-]);
+];
+
+export default defineConfig(config);
