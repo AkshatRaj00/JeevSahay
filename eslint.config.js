@@ -16,8 +16,9 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 /**
  * Core ESLint configuration for JavaScript/JSX files with React support.
  *
- * @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig.Config[]}
+ * @type {FlatConfig.Config[]}
  */
+/** @type {FlatConfig.Config[]} */
 const config = [
   globalIgnores(['dist']),
   {
