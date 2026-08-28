@@ -19,7 +19,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
  * @type {FlatConfig.Config[]}
  */
 /** @type {FlatConfig.Config[]} */
-const config = [
+const config: FlatConfig.Config[] = [
   globalIgnores(['dist']),
   {
     files: ['**/*.{js,jsx}'],
