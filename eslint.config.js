@@ -7,18 +7,16 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 
 /**
  * @typedef {Object} ReactConfig
- * @property {string[]} files - Glob patterns for files this config applies to (e.g., `**/*.{js,jsx}`).
- * @property {FlatConfig.PluginConfig[]} extends - ESLint and plugin configurations to extend (e.g., recommended rules).
- * @property {LanguageOptions} languageOptions - Language-specific options, including globals and parser configuration.
- * @property {Rules} [rules] - Optional ESLint rules to override or extend.
+ * @property {string[]} files - Glob patterns for JavaScript/JSX files.
+ * @property {FlatConfig.PluginConfig[]} extends - ESLint and plugin configurations.
+ * @property {LanguageOptions} languageOptions - Language options including globals and parser settings.
+ * @property {Rules} [rules] - Optional ESLint rules overrides.
  */
 
 /**
- * Core ESLint configuration for JavaScript/JSX files with React support.
- *
- * @type {FlatConfig.Config[]}
+ * ESLint configuration for React projects.
+ * @type {FlatConfig.Config[]} 
  */
-/** @type {FlatConfig.Config[]} */
 const config: FlatConfig.Config[] = [
   globalIgnores(['dist']),
   {
