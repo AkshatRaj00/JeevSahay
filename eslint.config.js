@@ -1,4 +1,4 @@
-import type { FlatConfig, LanguageOptions, ParserOptions, Rules } from '@typescript-eslint/utils/ts-eslint';
+import { FlatConfig, LanguageOptions, ParserOptions, Rules } from '@typescript-eslint/utils/ts-eslint';
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -17,7 +17,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
  * ESLint configuration for React projects.
  * @type {FlatConfig.Config[]}
  */
-const config: FlatConfig.Config[] = [
+const config = [
   globalIgnores(['dist']),
   {
     files: ['**/*.{js,jsx}'],
