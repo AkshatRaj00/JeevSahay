@@ -2,7 +2,7 @@
 
 A pan-India platform to connect people with nearby animal rescuers — report an injured or stray animal, and get matched with the closest available help.
 
-🔗 **Live:** [jeevsahay.in](https://jeevsahay.in)
+🔗 **Live:** [jeevsahay.in](https://jeev-sahay.vercel.app/)
 
 ## What it does
 
