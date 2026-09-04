@@ -9,8 +9,8 @@ import { defineConfig, globalIgnores } from 'eslint/config';
  * @typedef {Object} ReactConfig
  * @property {string[]} files - Glob patterns for JavaScript/JSX files.
  * @property {FlatConfig.Config[]} extends - ESLint and plugin configuration objects.
- * @property {LanguageOptions} languageOptions - Language options including globals and parser settings.
- * @property {Rules} [rules] - Optional ESLint rules overrides.
+ * @property {FlatConfig.LanguageOptions} languageOptions - Language options including globals and parser settings.
+ * @property {FlatConfig.Rules} [rules] - Optional ESLint rules overrides.
  */
 
 /**
@@ -26,11 +26,11 @@ const config = [
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
     ],
-    /** @type {LanguageOptions} */
+    /** @type {FlatConfig.LanguageOptions} */
     languageOptions: {
       /** @type {Record<string, boolean>} */
       globals: globals.browser,
-      /** @type {ParserOptions} */
+      /** @type {FlatConfig.ParserOptions} */
       parserOptions: {
         ecmaFeatures: { jsx: true },
       },
