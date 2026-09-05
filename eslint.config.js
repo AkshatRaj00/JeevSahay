@@ -18,7 +18,9 @@ import { defineConfig, globalIgnores } from 'eslint/config';
  * @type {FlatConfig.Config[]}
  */
 const config = [
+  /** @type {FlatConfig.Config} */
   globalIgnores(['dist']),
+  /** @type {FlatConfig.Config} */
   {
     files: ['**/*.{js,jsx}'],
     extends: [
@@ -38,4 +40,5 @@ const config = [
   },
 ];
 
+/** @type {FlatConfig.Config[]} */
 export default defineConfig(config);
