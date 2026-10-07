@@ -1,35 +1,167 @@
 # 🐾 JeevSahay
 
-A pan-India platform to connect people with nearby animal rescuers — report an injured or stray animal, and get matched with the closest available help.
+<p align="center">
+  <strong>Connect. Rescue. Save a Life.</strong><br/>
+  A privacy-first animal rescue platform that helps people find nearby rescuers quickly.
+</p>
 
-🔗 **Live:** [https://jeev-sahay.vercel.app/](https://jeev-sahay.vercel.app/)
+<p align="center">
+  <a href="https://jeev-sahay.vercel.app/">
+    <img src="https://img.shields.io/badge/🌐%20Live%20Demo-JeevSahay-16A34A?style=for-the-badge"/>
+  </a>
+  <img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Firebase-Backend-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Leaflet-Maps-199900?style=for-the-badge"/>
+</p>
 
-## What it does
+---
 
-Animal rescue in India is fragmented — no central way to find who's nearby and available when it matters. JeevSahay solves the *discovery* problem: report a case, and the platform surfaces nearby rescuers using proximity search, without requiring either side to create heavy accounts or share more data than necessary.
+## 🎬 Demo
 
-## Key Features
+<p align="center">
+  <a href="YOUR_VIDEO_LINK">
+    <img src="https://img.shields.io/badge/▶%20Watch%20JeevSahay%20Demo-EF4444?style=for-the-badge"/>
+  </a>
+</p>
 
-- 📍 **Proximity-based matching** — uses geohashing to find nearby rescuers/cases fast, without expensive geo-queries
-- 🔒 **Privacy-first by design** — localStorage-first data handling, so users aren't forced to hand over data they don't need to
-- 🗺️ **Interactive map view** — powered by Leaflet.js for locating and reporting cases visually
-- ⚡ **Lightweight & fast** — built on Vite for near-instant dev/build cycles
+<p align="center">
+  <img src="YOUR_SCREENSHOT_URL" width="90%"/>
+</p>
 
-## Tech Stack
+---
 
-| Layer | Tech |
+## 🌱 What is JeevSahay?
+
+JeevSahay is a **pan-India animal rescue platform** designed to solve one simple problem:
+
+> **When an animal needs help, how do you find the nearest available rescuer?**
+
+The platform uses **location-based matching and geohashing** to surface nearby rescue cases and rescuers while keeping data collection minimal.
+
+---
+
+## ✨ Features
+
+```text
+📍 Nearby Rescuer Matching
+🗺️ Interactive Map
+🐾 Animal Rescue Reporting
+⚡ Fast Geo-search
+🔒 Privacy-first Data Handling
+💾 Local-first Experience
+📱 Responsive UI
+🚀 Lightweight Vite Architecture
+```
+
+---
+
+## 🔄 Rescue Flow
+
+```mermaid id="jvsah1"
+flowchart LR
+    A[🐾 Animal Needs Help] --> B[👤 User Reports Case]
+    B --> C[📍 Capture Location]
+    C --> D[🌐 Geohash Search]
+    D --> E[🔎 Find Nearby Rescuers]
+
+    E --> F{Rescuer Available?}
+
+    F -->|Yes| G[🚑 Rescue Response]
+    F -->|No| H[📡 Expand Search]
+
+    H --> E
+    G --> I[✅ Case Resolved]
+```
+
+---
+
+## 🏗️ Architecture
+
+```text
+                  ┌───────────────────┐
+                  │     JeevSahay     │
+                  └─────────┬─────────┘
+                            │
+          ┌─────────────────┼─────────────────┐
+          ▼                 ▼                 ▼
+      React UI          Map Layer        Data Layer
+          │                 │                 │
+          ▼                 ▼                 ▼
+      Vite App           Leaflet          Firebase
+                            │                 │
+                            └────────┬────────┘
+                                     ▼
+                              Geohash Search
+                                     │
+                                     ▼
+                           Nearby Rescue Matching
+```
+
+---
+
+## 🧠 Core Matching Logic
+
+```text
+Report Case
+    ↓
+Get Coordinates
+    ↓
+Convert → Geohash
+    ↓
+Search Nearby Cells
+    ↓
+Find Rescuers / Cases
+    ↓
+Show on Map
+    ↓
+Connect Help
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
 |---|---|
-| Frontend | React (Vite) |
-| Styling | Tailwind CSS |
-| Backend / Data | Firebase |
-| Maps | Leaflet.js |
-| Geo-search | Geohashing |
+| Frontend | **React 19 + Vite** |
+| Styling | **Tailwind CSS** |
+| Backend | **Firebase** |
+| Geo Search | **geofire-common / Geohashing** |
+| Maps | **Leaflet + React Leaflet** |
+| Routing | **React Router** |
+| State | **Zustand** |
+| Icons | **Lucide React** |
+| Deployment | **Vercel** |
 
-## Status
+---
 
-🚧 Actively in development — built module by module in a strict build order (data layer → geo-search → UI → map integration) to keep the core matching logic solid before layering on features.
+## 📁 Project Structure
 
-## Running Locally
+```text
+JeevSahay/
+├── .github/
+├── .agents/
+├── docs/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── firebase.js
+│   ├── firebaseConfig.js
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── vercel.json
+```
+
+---
+
+## 🚀 Run Locally
 
 ```bash
 git clone https://github.com/AkshatRaj00/JeevSahay.git
@@ -38,23 +170,44 @@ npm install
 npm run dev
 ```
 
-You'll need your own Firebase project config — copy `.env.example` to `.env` and add your Firebase keys before running.
+Configure your Firebase environment before running the application.
 
-## Roadmap
+---
 
-- [ ] Rescuer verification flow
-- [ ] Case status tracking (reported → in progress → resolved)
-- [ ] SMS/notification alerts for nearby rescuers
-- [ ] Multi-language support
+## 🔮 Roadmap
 
-## Contributing
+```text
+Verification
+     ↓
+Case Tracking
+     ↓
+Notifications
+     ↓
+Multi-language Support
+     ↓
+Pan-India Rescue Network 🐾
+```
 
-This is a solo-built project under active development — issues and PRs are welcome, especially around the matching logic and UI. Open an issue before submitting a large PR so we're aligned on direction.
+---
 
-## Connect
+## 🌐 Live
 
-Built by **Akshat Raj** ([@AkshatRaj00](https://github.com/AkshatRaj00)) — [OnePersonAI](https://onepersonai.in)
+<p align="center">
+  <a href="https://jeev-sahay.vercel.app/">
+    <img src="https://img.shields.io/badge/🚑%20Open%20JeevSahay-16A34A?style=for-the-badge"/>
+  </a>
+</p>
 
-## Repository Health
-<!-- continuous-maintenance-guard -->
-- Verified Architecture Status: Active (2026-09-18)
+---
+
+<p align="center">
+
+### 🐾 JeevSahay
+
+<strong>Technology for those who cannot ask for help.</strong>
+
+<br/><br/>
+
+Built with ❤️ by <b>Akshat Raj</b>
+
+</p>
